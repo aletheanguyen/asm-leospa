@@ -39,10 +39,11 @@
 }
 
 /* SHOWCASE */
-.showcase{
+
+.showcase {
     width: 100%;
-    margin: 50px 0;
 }
+
 .showcase .container {
     max-width: 100%;
     display: flex;
@@ -127,7 +128,7 @@
     max-width: 160px;
     position: absolute;
     left: 16%;
-    top:-50px;
+    top: -50px;
 }
 
 #decor2 {
@@ -146,21 +147,23 @@
     width: 84px;
 }
 
-.img-service{
+.img-service {
     width: 100%;
     display: grid;
-    grid-template-areas:
-    'img img img img';
+    grid-template-areas: 'img img img img';
     grid-column-gap: 5px;
     margin-bottom: 50px;
 }
-.img-service .img{
+
+.img-service .img {
     position: relative;
 }
-.img-service .img img{
+
+.img-service .img img {
     width: 100%;
 }
-.img-service .img .hover{
+
+.img-service .img .hover {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -168,74 +171,190 @@
     left: 0;
     display: none;
 }
-.img-service .img .hover img{
+
+.img-service .img .hover img {
     width: 47px;
 }
-.img-service .img:hover  .hover{
+
+.img-service .img:hover .hover {
     background-color: rgba(255, 129, 126, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white    ;
+    color: white;
 }
 
-
 /* procedure */
-.procedure{
+
+.procedure {
     width: 100%;
     margin: 50px 0;
 }
-.procedure .container{
+
+.procedure .container {
     max-width: 1100px;
 }
-.procedure .content .title-desc{
+
+.procedure .content .title-desc {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.procedure .title-desc .title-desc-content{
+
+.procedure .title-desc .title-desc-content {
     flex-basis: 60%;
     text-align: center;
 }
-.procedure .procedure-cards{
+
+.procedure .procedure-cards {
     display: grid;
-    grid-template-areas:'card card card';
+    grid-template-areas: 'card card card';
     justify-content: center;
 }
-.procedure .procedure-cards .card{
+
+.procedure .procedure-cards .card {
     border: 1px solid #ddd;
     margin: 10px;
     padding: 10px;
     text-align: center;
 }
-.procedure .procedure-cards .card p{
+
+.procedure .procedure-cards .card p {
     margin-bottom: 40px;
 }
-.procedure .procedure-cards .card button{
+
+.procedure .procedure-cards .card button {
     margin-bottom: 30px;
 }
-.procedure .procedure-cards .card:hover{
+
+.procedure .procedure-cards .card:hover {
     box-shadow: 0 5px 20px #f0f0f0;
 }
-.procedure .procedure-cards .card:hover button{
-background-color:  var(--primary-color);
+
+.procedure .procedure-cards .card:hover button {
+    background-color: var(--primary-color);
 }
+
 /* REVIEW */
-.review{
+
+.review {
     width: 100%;
     background-color: #fff9f8;
     margin: 50px 0;
     padding: 50px 0;
 }
-.review .container{
+
+.review .container {
     display: flex;
     justify-content: center;
 }
-.review .container .content{
+
+.review .container .content {
     flex-basis: 80%;
+    padding: 0 20px;
 }
 
+.review .container .content .icon, .review .container .content .review-desc,.review .container .content .avatar{
+    text-align: center;
+}
+
+/* EXPERIENCE */
+.experienceTeam{
+    width: 100%;
+    margin: 50px 0;
+}
+.experienceTeam .container .content .title-desc{
+    max-width: 60%;
+    margin: auto;  
+    text-align: center;
+    margin-bottom: 50px;  
+}
+.experienceTeam .container .content .member-cards{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 'card card card';
+}
+.experienceTeam .container .content .member-cards .card{
+    margin: 0 15px;
+}
+.experienceTeam .container .content .cover{
+    height: 113px;
+    position: relative;
+}
+.experienceTeam .container .content .member-cards .card .information{
+    background-color: white;
+    min-width: 70%;
+    padding: 30px 20px;
+    text-align: center;
+    position: absolute;
+    top:-80px;
+    left: 34px;
+    box-shadow: 0 5px 20px #f0f0f0;
+}
+.experienceTeam .information i{
+    line-height: 2;
+    border-radius: 50%;
+}
+.experienceTeam .information .contact{
+    display: none;
+}
+.experienceTeam .member-cards .card:hover .contact{
+    display: block;
+}
+.experienceTeam .container .content .member-cards .card:hover .information{
+    top:-112px;
+}
+.experienceTeam .information .contact i:hover{
+    color: var(--primary-color);
+}
+
+/* APPOINTMENT */
+.form{
+    width: 100%;
+    background-color: #fff9f8;
+    margin: 50px 0;
+}
+.form .container {
+    max-width: 100%;
+}
+.form .content{
+    display: grid;
+    grid-template-columns: 4fr 6fr; 
+}
+.form .content .left-item img{
+    width: 100%;
+}
+.form .content .right-item{
+    padding: 0 100px;
+}
+.form .content .right-item .form-detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+}
+.form .content .right-item .form-detail input, .form .content .right-item .form-detail textarea{
+    width: 100%;
+}
+
+.form-item:last-child{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.form input, .form textarea{
+    background-color: transparent;
+    border-width: 0px 0 1px 0;
+    border-color: #d4d3d3;
+    border-radius: 0;
+    padding: 10px 5px;
+    color: #999;
+}
+.form input:focus, .form textarea:focus{
+    outline:2px solid #d4d3d3;
+    background-color: white;
+}
 
 
 
